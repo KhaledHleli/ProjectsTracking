@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="society_name">المؤسسة العامة للتدريب التقني و المهني</string>
+    <string name="application_name">تطبيق متابعة المشاريع</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="authenticationHintTv">استعمل الاستمارة التالية لتسجيل الدخول</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+</resources>
+
+
+    

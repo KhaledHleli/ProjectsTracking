@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="society_name">Training and vocational technical corporation</string>
+    <string name="application_name">Projects monitoring application</string>
+    <string name="sign_in">Sign In</string>
+    <string name="authenticationHintTv">Use the form below to connect to the application</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+</resources>
+
+
+    
