@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_screen_background">
+    android:background="@drawable/splash_screen_background"
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:id="@+id/splash_screen_header"
@@ -19,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_weight="10"
-            android:src="@drawable/tvtc_icon" />
+            android:src="@drawable/company_small_icon" />
 
         <TextView
             android:id="@+id/society_name_tv"

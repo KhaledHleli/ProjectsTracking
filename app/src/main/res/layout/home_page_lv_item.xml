@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/contractNumberTv"
+        android:text="@string/contractNumber"
+        style="@style/projectItemTvRight"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+
+    <TextView
+        android:id="@+id/contractNumberTextValue"
+        android:layout_toRightOf="@+id/contractNumberTv"
+        style="@style/projectItemTvRight" />
+
+    <TextView
+        android:id="@+id/contractStatusTv"
+        android:text="@string/status"
+        android:layout_below="@id/contractNumberTv"
+        style="@style/projectItemTvRight"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+
+    <TextView
+        android:id="@+id/contractStatus"
+        android:layout_toRightOf="@+id/contractStatusTv"
+        android:layout_below="@id/contractNumberTextValue"
+        style="@style/projectItemTvRight" />
+
+    <TextView
+        android:id="@+id/recipientAdministrationTv"
+        android:text="@string/recipientAdministration"
+        android:layout_below="@id/contractStatusTv"
+        style="@style/projectItemTvRight"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+
+    <TextView
+        android:id="@+id/recipientAdministration"
+        android:layout_toRightOf="@+id/recipientAdministrationTv"
+        android:layout_below="@id/contractStatus"
+        style="@style/projectItemTvRight" />
+
+    <TextView
+        android:id="@+id/trackingEndDateTv"
+        android:text="@string/trackingEndDate"
+        android:layout_below="@id/recipientAdministrationTv"
+        style="@style/projectItemTvRight"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/trackingEndDate"
+        style="@style/projectItemTvRight"
+        android:layout_toRightOf="@+id/recipientAdministrationTv"
+        android:layout_below="@id/recipientAdministration"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/arrowRight"
+        android:src="@drawable/next_blue"
+        android:layout_toRightOf="@+id/recipientAdministration"
+        android:layout_alignParentRight="true"
+     />
+
+
+
+</RelativeLayout>
