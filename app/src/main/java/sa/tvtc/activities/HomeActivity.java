@@ -15,7 +15,7 @@ import sa.tvtc.utilities.ProjectsExpandableListAdapter;
 
 public class HomeActivity extends Activity {
 
-    private ProjectsExpandableListAdapter listAdapter;
+    private ProjectsExpandableListAdapter listAdapter;//test
     private ExpandableListView expListView;
     private List<String> projectsListDataHeader;
     private HashMap<String, ProjectFieldsForExpandableList> projectsListDataChild;
