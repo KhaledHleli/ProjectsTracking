@@ -6,5 +6,14 @@
     <string name="authenticationHintTv">استعمل الاستمارة التالية لتسجيل الدخول</string>
     <string name="username">اسم المستخدم</string>
     <string name="password">كلمة المرور</string>
-    <string name="listOfProjectsToTrack">List of projects to track</string>
+    <string name="listOfProjectsToTrack">المشاريع التي اسندت اليكم لتتبعها:</string>
+    <string name="contractNumber">رقم المشروع:</string>
+    <string name="status">الحالة:</string>
+    <string name="recipientAdministration">الادارة المستفيدة:</string>
+    <string name="trackingEndDate">تاريخ نهاية المتابعة:</string>
+    <string name="projectDetails"><u>بيانات المشروع:</u></string>
+
 </resources>
+
+
+    

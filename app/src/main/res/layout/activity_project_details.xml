@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_background"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/projectDetails"
+        android:id="@+id/projectDetailsTv"
+        android:gravity="right"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <!--TODO replace the image view in the other pages used to draw a line with a simple view like the following-->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/projectDetailsTv"
+        android:background="@android:color/white"
+        android:id="@+id/white_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/white_line"
+        android:textSize="25sp"
+        android:id="@+id/projectNumberTv"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/contractNumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/projectNumberTv"
+        android:textSize="25sp"
+        android:layout_below="@+id/white_line"
+        android:id="@+id/projectNumberValue"
+        android:textColor="@android:color/white"
+        android:text="12222"/>
+
+</RelativeLayout>

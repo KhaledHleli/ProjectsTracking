@@ -1,71 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="55dip"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:padding="5dp">
 
     <TextView
         android:id="@+id/contractNumberTv"
         android:text="@string/contractNumber"
-        style="@style/projectItemTvRight"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+        style="@style/projectItemTv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/contractNumberTextValue"
-        android:layout_toRightOf="@+id/contractNumberTv"
-        style="@style/projectItemTvRight" />
+        style="@style/projectItemTv"
+        android:text="@string/sign_in"
+        android:layout_toLeftOf="@+id/contractNumberTv" />
 
     <TextView
         android:id="@+id/contractStatusTv"
         android:text="@string/status"
         android:layout_below="@id/contractNumberTv"
-        style="@style/projectItemTvRight"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+        style="@style/projectItemTv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/contractStatus"
-        android:layout_toRightOf="@+id/contractStatusTv"
         android:layout_below="@id/contractNumberTextValue"
-        style="@style/projectItemTvRight" />
+        style="@style/projectItemTv"
+        android:layout_toLeftOf="@+id/contractStatusTv" />
 
     <TextView
         android:id="@+id/recipientAdministrationTv"
         android:text="@string/recipientAdministration"
         android:layout_below="@id/contractStatusTv"
-        style="@style/projectItemTvRight"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        style="@style/projectItemTv" />
 
     <TextView
         android:id="@+id/recipientAdministration"
-        android:layout_toRightOf="@+id/recipientAdministrationTv"
         android:layout_below="@id/contractStatus"
-        style="@style/projectItemTvRight" />
+        android:layout_toLeftOf="@+id/recipientAdministrationTv"
+        style="@style/projectItemTv" />
 
     <TextView
         android:id="@+id/trackingEndDateTv"
         android:text="@string/trackingEndDate"
         android:layout_below="@id/recipientAdministrationTv"
-        style="@style/projectItemTvRight"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:layout_alignParentBottom="true"/>
+        style="@style/projectItemTv"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        />
 
     <TextView
         android:id="@+id/trackingEndDate"
-        style="@style/projectItemTvRight"
-        android:layout_toRightOf="@+id/recipientAdministrationTv"
+        style="@style/projectItemTv"
         android:layout_below="@id/recipientAdministration"
-        android:layout_alignParentBottom="true"/>
+        android:layout_toLeftOf="@+id/trackingEndDateTv" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/arrowRight"
+        android:padding="10dp"
         android:src="@drawable/next_blue"
-        android:layout_toRightOf="@+id/recipientAdministration"
-        android:layout_alignParentRight="true"
-     />
-
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

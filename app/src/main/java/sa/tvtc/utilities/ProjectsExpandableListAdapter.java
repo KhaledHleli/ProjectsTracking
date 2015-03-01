@@ -54,7 +54,7 @@ public class ProjectsExpandableListAdapter extends BaseExpandableListAdapter {
 
         TextView contractNumberTextValue = (TextView) convertView
                 .findViewById(R.id.contractNumberTextValue);
-        TextView recipientAdministration    = (TextView) convertView
+        TextView recipientAdministration = (TextView) convertView
                 .findViewById(R.id.recipientAdministration);
         TextView contractStatus = (TextView) convertView
                 .findViewById(R.id.contractStatus);
@@ -64,9 +64,7 @@ public class ProjectsExpandableListAdapter extends BaseExpandableListAdapter {
         contractNumberTextValue.setText(projectFieldsForExpandableList.getProjectNumber());
         contractStatus.setText(projectFieldsForExpandableList.getProjectStatus());
         recipientAdministration.setText(projectFieldsForExpandableList.getRecipientAdministration());
-        trackingEndDate.setText(DateFormat.getDateInstance
-                (DateFormat.LONG, _context.getResources().getConfiguration().locale)
-                .format(projectFieldsForExpandableList.getFollowUpDate()));
+        trackingEndDate.setText(projectFieldsForExpandableList.getFollowUpDate());
         return convertView;
     }
 

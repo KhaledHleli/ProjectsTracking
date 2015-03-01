@@ -6,9 +6,9 @@ import java.util.Date;
 public class ProjectFieldsForExpandableList {
 
     private String projectNumber, projectStatus, recipientAdministration;
-    private Date followUpDate;
+    private String followUpDate;
 
-    public ProjectFieldsForExpandableList(String projectNumber, String projectStatus, String recipientAdministration, Date followUpDate) {
+    public ProjectFieldsForExpandableList(String projectNumber, String projectStatus, String recipientAdministration, String followUpDate) {
         this.projectNumber = projectNumber;
         this.projectStatus = projectStatus;
         this.recipientAdministration = recipientAdministration;
@@ -39,11 +39,11 @@ public class ProjectFieldsForExpandableList {
         this.recipientAdministration = recipientAdministration;
     }
 
-    public Date getFollowUpDate() {
+    public String getFollowUpDate() {
         return followUpDate;
     }
 
-    public void setFollowUpDate(Date followUpDate) {
+    public void setFollowUpDate(String followUpDate) {
         this.followUpDate = followUpDate;
     }
 }
