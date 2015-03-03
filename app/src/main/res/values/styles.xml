@@ -15,16 +15,94 @@
         <item name="android:layout_marginRight">2dp</item>
     </style>
 
-    <style name="awesome_blue_button">
-        <item name="android:background">@drawable/button_background</item>
+    <style name="awesome_green_button">
+        <item name="android:background">@drawable/button_green_background</item>
         <item name="android:shadowColor">#ff497ea8</item>
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">0</item>
-        <item name="android:layout_width">100dp</item>
-        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:shadowRadius">8</item>
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="awesome_yellow_button">
+        <item name="android:background">@drawable/button_yellow_background</item>
+        <item name="android:shadowColor">#ff497ea8</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:shadowRadius">8</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="projectDetailsTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">5sp</item>
+    </style>
+
+    <style name="textViewToTheRight" parent="projectDetailsTv">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="white_line" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">3dip</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <!--Specific styles for the authentication page-->
+    <style name="authenticationScreenEditText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">23dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">right</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:background">@drawable/awesome_et</item>
+
+    </style>
+    <style name="authenticationScreenTextView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginTop">23dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!--Specific styles for addFollowUp page-->
+    <style name="addFollowUpScreenTextViewToTheRight" parent="textViewToTheRight">
+        <item name="android:layout_marginTop">13dp</item>
+    </style>
+    <style name="number_pick_up">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:ems">10</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/awesome_et</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="addFollowUpScreenTextArea" parent="textViewToTheRight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">2</item>
+        <item name="android:gravity">right</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:background">@drawable/awesome_et</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
     </style>
 
 </resources>

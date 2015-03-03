@@ -1,7 +1,9 @@
 <resources>
     <color name="dark_green">#06692C</color>
     <color name="bright_green">#8ED1A8</color>
-    <color name="dark_blue">#6d0038d1</color>
+    <color name="dark_blue">#ff0f2e87</color>
     <color name="bright_blue">#ff00c2d1</color>
+    <color name="holo_red_light">#ffd11c2e</color>
+    <color name="dark_yellow">#ffd1bc04</color>
 
 </resources>

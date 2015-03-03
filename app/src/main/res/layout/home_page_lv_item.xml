@@ -52,23 +52,13 @@
         android:layout_below="@id/recipientAdministrationTv"
         style="@style/projectItemTv"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/trackingEndDate"
         style="@style/projectItemTv"
         android:layout_below="@id/recipientAdministration"
         android:layout_toLeftOf="@+id/trackingEndDateTv" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/arrowRight"
-        android:padding="10dp"
-        android:src="@drawable/next_blue"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

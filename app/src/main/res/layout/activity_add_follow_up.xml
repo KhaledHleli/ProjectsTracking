@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/splash_screen_background"
+    tools:context=".AddFollowUpActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/addFollowUp"
+        android:id="@+id/header"
+        android:gravity="right"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:layout_below="@+id/header"
+        style="@style/white_line"
+        android:id="@+id/addFollowUpTv" />
+
+    <TextView
+        style="@style/addFollowUpScreenTextViewToTheRight"
+        android:layout_below="@+id/addFollowUpTv"
+        android:id="@+id/dateOfTrackingTv"
+        android:text="@string/dateOfTracking" />
+
+    <Button
+        android:text="@string/pick_date"
+        style="@style/awesome_yellow_button"
+        android:layout_below="@+id/header"
+        android:layout_alignLeft="@+id/dateOfTrackingTv"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:onClick="showDatePickerDialog"
+        android:id="@+id/pick_date_button" />
+
+    <TextView
+        style="@style/addFollowUpScreenTextViewToTheRight"
+        android:layout_below="@+id/dateOfTrackingTv"
+        android:id="@+id/expectedCompletionPercentageTv"
+        android:text="@string/expectedCompletionPercentage" />
+
+    <EditText
+        style="@style/number_pick_up"
+        android:id="@+id/expectedCompletionPercentageValue"
+        android:layout_toLeftOf="@+id/expectedCompletionPercentageTv"
+        android:layout_below="@+id/pick_date_button" />
+
+    <TextView
+        android:layout_below="@+id/expectedCompletionPercentageTv"
+        android:id="@+id/completionPercentageTv"
+        android:text="@string/completionPercentage"
+        style="@style/addFollowUpScreenTextViewToTheRight" />
+
+    <EditText
+        style="@style/number_pick_up"
+        android:id="@+id/completionPercentageValue"
+        android:layout_toLeftOf="@+id/completionPercentageTv"
+        android:layout_below="@+id/expectedCompletionPercentageTv" />
+
+    <TextView
+        style="@style/addFollowUpScreenTextViewToTheRight"
+        android:layout_below="@+id/completionPercentageTv"
+        android:id="@+id/workersNumberTv"
+        android:text="@string/workersNumber" />
+
+    <EditText
+        style="@style/number_pick_up"
+        android:id="@+id/workersNumberValue"
+        android:layout_toLeftOf="@+id/workersNumberTv"
+        android:layout_below="@+id/completionPercentageValue" />
+
+    <TextView
+        style="@style/addFollowUpScreenTextViewToTheRight"
+        android:layout_below="@+id/workersNumberTv"
+        android:id="@+id/equipmentsNumberTv"
+        android:text="@string/equipmentsNumber" />
+
+    <EditText
+        style="@style/number_pick_up"
+        android:id="@+id/equipmentsNumberValue"
+        android:layout_toLeftOf="@+id/equipmentsNumberTv"
+        android:layout_below="@+id/workersNumberValue" />
+
+    <TextView
+        style="@style/addFollowUpScreenTextViewToTheRight"
+        android:layout_below="@+id/equipmentsNumberTv"
+        android:id="@+id/currentWorkTv"
+        android:text="@string/currentWork" />
+
+    <EditText
+        android:id="@+id/currentWorkValue"
+        android:layout_below="@+id/currentWorkTv"
+        style="@style/addFollowUpScreenTextArea"
+        android:textColor="@color/dark_blue"/>
+
+    <TextView
+        style="@style/addFollowUpScreenTextViewToTheRight"
+        android:layout_below="@+id/currentWorkValue"
+        android:id="@+id/currentObstaclesTv"
+        android:text="@string/currentObstacles" />
+
+    <EditText
+        android:id="@+id/currentObstaclesValue"
+        android:layout_below="@+id/currentObstaclesTv"
+        style="@style/addFollowUpScreenTextArea"
+        android:textColor="@color/holo_red_light"/>
+
+</RelativeLayout>
+
+

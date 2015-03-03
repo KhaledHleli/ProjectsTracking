@@ -11,7 +11,28 @@
     <string name="status">الحالة:</string>
     <string name="recipientAdministration">الادارة المستفيدة:</string>
     <string name="trackingEndDate">تاريخ نهاية المتابعة:</string>
-    <string name="projectDetails"><u>بيانات المشروع:</u></string>
+    <string name="projectDetails">        بيانات المشروع:    </string>
+    <string name="projectName">المشروع:    </string>
+    <string name="projectStrip">القطاع:    </string>
+    <string name="contractor">المقاول:</string>
+    <string name="trackingStartDate">        تاريخ بداية المتابعة:</string>
+    <string name="currentTrackingEndDate">   تاريخ نهاية المتابعة  الحالية:    </string>
+    <string name="sumOfChangeRequestValue">  اجمالي اوامر التغيير:</string>
+    <string name="addFollowUp">تسجيل متابعة</string>
+    <string name="dateOfTracking">تاريخ متابعة الموقع</string>
+    <string name="expectedCompletionPercentage">نسبة الانجاز المتوقعة</string>
+    <string name="completionPercentage">نسبة الانجاز</string>
+    <string name="workersNumber">عدد العمالة</string>
+    <string name="equipmentsNumber">عدد المعدات </string>
+    <string name="currentWork">العمل الحالي </string>
+    <string name="currentObstacles">المعوقات الحالية </string>
+    <string name="currentNotices">الملاحظات الحالية </string>
+    <string name="equipmentsState">حالة المعدات </string>
+    <string name="measuresToAvoidObstacles">اجراءات لتفادي المعوقات </string>
+    <string name="attachPhoto">تحميل صورة</string>
+    <string name="principalServices">موقف الخدمات  الاساسية </string>
+    <string name="pick_date">اختيار</string>
+    <string name="pick_date_msg">الرجاء اختيار تاريخ المتابعة:</string>
 
 </resources>
 
