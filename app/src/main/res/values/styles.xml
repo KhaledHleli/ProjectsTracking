@@ -30,6 +30,7 @@
         <item name="android:background">@drawable/button_yellow_background</item>
         <item name="android:shadowColor">#ff497ea8</item>
         <item name="android:shadowDx">0</item>
+        <item name="android:gravity">center</item>
         <item name="android:shadowDy">0</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">40dp</item>
@@ -73,7 +74,6 @@
     <style name="authenticationScreenTextView">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentLeft">true</item>
         <item name="android:layout_marginTop">23dp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
         <item name="android:textColor">@android:color/white</item>
@@ -81,7 +81,7 @@
     </style>
     <!--Specific styles for addFollowUp page-->
     <style name="addFollowUpScreenTextViewToTheRight" parent="textViewToTheRight">
-        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:layout_marginTop">10dp</item>
     </style>
     <style name="number_pick_up">
         <item name="android:layout_width">wrap_content</item>
@@ -95,14 +95,14 @@
         <item name="android:layout_alignParentLeft">true</item>
     </style>
     <style name="addFollowUpScreenTextArea" parent="textViewToTheRight">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:lines">2</item>
         <item name="android:gravity">right</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:inputType">textMultiLine</item>
         <item name="android:background">@drawable/awesome_et</item>
-        <item name="android:layout_alignParentLeft">true</item>
-        <item name="android:layout_alignParentRight">true</item>
     </style>
 
 </resources>

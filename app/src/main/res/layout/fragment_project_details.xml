@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,152 +7,58 @@
     android:padding="15dp"
     tools:context=".ProjectDetailActivity">
 
-    <TextView
+    <ViewFlipper
+        android:id="@+id/viewflipper"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/projectDetails"
-        android:id="@+id/projectDetailsTv"
-        android:gravity="right"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white" />
-    <!--TODO replace the image view in the other pages used to draw a line with a simple view like the following-->
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="3dip"
-        android:layout_marginTop="4dp"
-        android:layout_below="@+id/projectDetailsTv"
-        android:background="@android:color/white"
-        android:id="@+id/white_line" />
+        android:layout_height="fill_parent"
+        android:layout_margin="6dp">
 
-    <TextView
-        android:layout_below="@+id/white_line"
-        android:id="@+id/projectNumberTv"
-        style="@style/textViewToTheRight"
-        android:text="@string/contractNumber" />
 
-    <TextView
-        android:layout_toLeftOf="@+id/projectNumberTv"
-        style="@style/projectDetailsTv"
-        android:layout_below="@+id/white_line"
-        android:id="@+id/projectNumberValue" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/projectNumberTv"
-        android:id="@+id/projectNameTv"
-        android:text="@string/projectName" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Windows PC"
+                android:textColor="#b7102f"
+                android:textSize="25dp"></TextView>
 
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/projectNameTv"
-        android:layout_below="@+id/projectNumberValue"
-        android:id="@+id/projectNameValue" />
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/company_small_icon" />
+        </LinearLayout>
 
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/projectNameTv"
-        android:id="@+id/recipientAdministrationTv"
-        android:text="@string/recipientAdministration" />
 
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/recipientAdministrationTv"
-        android:layout_below="@+id/projectNameValue"
-        android:id="@+id/recipientAdministrationValue"
-        android:text="" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/recipientAdministrationTv"
-        android:id="@+id/projectStripTv"
-        android:text="@string/projectStrip" />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubuntu PC"
+                android:textColor="#191975"
+                android:textSize="25dp"
+                android:textStyle="italic"></TextView>
 
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/projectStripTv"
-        android:layout_below="@+id/recipientAdministrationValue"
-        android:id="@+id/projectStripValue" />
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/picture_icon" />
 
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/projectStripTv"
-        android:id="@+id/contractorTv"
-        android:text="@string/contractor" />
-
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/contractorTv"
-        android:layout_below="@+id/projectStripValue"
-        android:id="@+id/contractorValue" />
-
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/contractorTv"
-        android:id="@+id/contractStatusTv"
-        android:text="@string/status" />
-
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/contractStatusTv"
-        android:layout_below="@+id/contractorValue"
-        android:id="@+id/contractStatusValue" />
-
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/contractStatusTv"
-        android:id="@+id/trackingEndDateTv"
-        android:text="@string/trackingEndDate" />
-
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/trackingEndDateTv"
-        android:layout_below="@+id/contractStatusValue"
-        android:id="@+id/trackingEndDateValue" />
-
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/trackingEndDateTv"
-        android:id="@+id/trackingStartDateTv"
-        android:text="@string/trackingStartDate" />
-
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/trackingStartDateTv"
-        android:layout_below="@+id/trackingEndDateValue"
-        android:id="@+id/trackingStartDateValue" />
-
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/trackingStartDateTv"
-        android:id="@+id/currentTrackingEndDateTv"
-        android:text="@string/currentTrackingEndDate" />
-
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/currentTrackingEndDateTv"
-        android:layout_below="@+id/trackingStartDateValue"
-        android:id="@+id/currentTrackingEndDateValue" />
-
-    <TextView
-        style="@style/textViewToTheRight"
-        android:layout_below="@+id/currentTrackingEndDateTv"
-        android:id="@+id/sumOfChangeRequestTV"
-        android:text="@string/sumOfChangeRequestValue" />
-
-    <TextView
-        style="@style/projectDetailsTv"
-        android:layout_toLeftOf="@+id/sumOfChangeRequestTV"
-        android:layout_below="@+id/currentTrackingEndDateValue"
-        android:id="@+id/sumOfChangeRequestValue" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/addFollowUp"
-        android:id="@+id/addTrackingButton"
-        style="@style/awesome_green_button"
-        android:layout_alignParentBottom="true" />
-
-</RelativeLayout>
+        </LinearLayout>
+    </ViewFlipper>
+</LinearLayout>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
     android:background="@drawable/splash_screen_background"
     tools:context=".AddFollowUpActivity">
 
@@ -16,6 +15,7 @@
         android:id="@+id/header"
         android:gravity="right"
         android:textSize="30sp"
+        android:padding="10dp"
         android:textStyle="bold"
         android:textColor="@android:color/white" />
 
@@ -24,95 +24,206 @@
         style="@style/white_line"
         android:id="@+id/addFollowUpTv" />
 
-    <TextView
-        style="@style/addFollowUpScreenTextViewToTheRight"
-        android:layout_below="@+id/addFollowUpTv"
-        android:id="@+id/dateOfTrackingTv"
-        android:text="@string/dateOfTracking" />
+    <ViewFlipper
+        android:id="@+id/addFollowUpVf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:text="@string/pick_date"
-        style="@style/awesome_yellow_button"
-        android:layout_below="@+id/header"
-        android:layout_alignLeft="@+id/dateOfTrackingTv"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp"
-        android:onClick="showDatePickerDialog"
-        android:id="@+id/pick_date_button" />
 
-    <TextView
-        style="@style/addFollowUpScreenTextViewToTheRight"
-        android:layout_below="@+id/dateOfTrackingTv"
-        android:id="@+id/expectedCompletionPercentageTv"
-        android:text="@string/expectedCompletionPercentage" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/addFollowUpFirstScreen"
+            android:padding="10dp">
 
-    <EditText
-        style="@style/number_pick_up"
-        android:id="@+id/expectedCompletionPercentageValue"
-        android:layout_toLeftOf="@+id/expectedCompletionPercentageTv"
-        android:layout_below="@+id/pick_date_button" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_below="@+id/expectedCompletionPercentageTv"
-        android:id="@+id/completionPercentageTv"
-        android:text="@string/completionPercentage"
-        style="@style/addFollowUpScreenTextViewToTheRight" />
+                <TextView
+                    style="@style/addFollowUpScreenTextViewToTheRight"
+                    android:id="@+id/dateOfTrackingTv"
+                    android:text="@string/dateOfTracking" />
 
-    <EditText
-        style="@style/number_pick_up"
-        android:id="@+id/completionPercentageValue"
-        android:layout_toLeftOf="@+id/completionPercentageTv"
-        android:layout_below="@+id/expectedCompletionPercentageTv" />
+                <Button
+                    android:text="@string/pick_date"
+                    style="@style/awesome_yellow_button"
+                    android:layout_alignLeft="@+id/dateOfTrackingTv"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20dp"
+                    android:onClick="showDatePickerDialog"
+                    android:id="@+id/pick_date_button" />
 
-    <TextView
-        style="@style/addFollowUpScreenTextViewToTheRight"
-        android:layout_below="@+id/completionPercentageTv"
-        android:id="@+id/workersNumberTv"
-        android:text="@string/workersNumber" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/expectedCompletionPercentageLl"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="100"
+                    android:layout_below="@+id/pick_date_button">
 
-    <EditText
-        style="@style/number_pick_up"
-        android:id="@+id/workersNumberValue"
-        android:layout_toLeftOf="@+id/workersNumberTv"
-        android:layout_below="@+id/completionPercentageValue" />
+                    <SeekBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="55"
+                        android:layout_gravity="bottom"
+                        android:id="@+id/expectedCompletionPercentageValue" />
 
-    <TextView
-        style="@style/addFollowUpScreenTextViewToTheRight"
-        android:layout_below="@+id/workersNumberTv"
-        android:id="@+id/equipmentsNumberTv"
-        android:text="@string/equipmentsNumber" />
+                    <TextView
+                        android:layout_weight="20"
+                        style="@style/addFollowUpScreenTextViewToTheRight"
+                        android:id="@+id/seekBar1Value"
+                        android:layout_marginTop="0dp"
+                        android:gravity="right"
+                        android:text="12" />
 
-    <EditText
-        style="@style/number_pick_up"
-        android:id="@+id/equipmentsNumberValue"
-        android:layout_toLeftOf="@+id/equipmentsNumberTv"
-        android:layout_below="@+id/workersNumberValue" />
+                    <TextView
+                        android:layout_weight="25"
+                        android:layout_marginTop="0dp"
+                        style="@style/addFollowUpScreenTextViewToTheRight"
+                        android:id="@+id/expectedCompletionPercentageTv"
+                        android:text="@string/expectedCompletionPercentage" />
 
-    <TextView
-        style="@style/addFollowUpScreenTextViewToTheRight"
-        android:layout_below="@+id/equipmentsNumberTv"
-        android:id="@+id/currentWorkTv"
-        android:text="@string/currentWork" />
+                </LinearLayout>
 
-    <EditText
-        android:id="@+id/currentWorkValue"
-        android:layout_below="@+id/currentWorkTv"
-        style="@style/addFollowUpScreenTextArea"
-        android:textColor="@color/dark_blue"/>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/completionPercentageLl"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    android:layout_below="@+id/expectedCompletionPercentageLl">
 
-    <TextView
-        style="@style/addFollowUpScreenTextViewToTheRight"
-        android:layout_below="@+id/currentWorkValue"
-        android:id="@+id/currentObstaclesTv"
-        android:text="@string/currentObstacles" />
 
-    <EditText
-        android:id="@+id/currentObstaclesValue"
-        android:layout_below="@+id/currentObstaclesTv"
-        style="@style/addFollowUpScreenTextArea"
-        android:textColor="@color/holo_red_light"/>
+                    <SeekBar
+                        android:layout_weight="55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/completionPercentageValue"
+                        android:layout_marginTop="15dp" />
 
-</RelativeLayout>
+                    <TextView
+                        android:layout_weight="20"
+                        style="@style/addFollowUpScreenTextViewToTheRight"
+                        android:id="@+id/seekBar2Value"
+                        android:gravity="right"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/completionPercentageTv"
+                        android:layout_weight="25"
+                        android:text="@string/completionPercentage"
+                        style="@style/addFollowUpScreenTextViewToTheRight" />
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/addFollowUpScreenTextViewToTheRight"
+                    android:layout_below="@+id/completionPercentageLl"
+                    android:id="@+id/workersNumberTv"
+                    android:text="@string/workersNumber" />
+
+                <EditText
+                    style="@style/number_pick_up"
+                    android:id="@+id/workersNumberValue"
+                    android:layout_toLeftOf="@+id/workersNumberTv"
+                    android:layout_below="@+id/completionPercentageLl" />
+
+                <TextView
+                    style="@style/addFollowUpScreenTextViewToTheRight"
+                    android:layout_below="@+id/workersNumberTv"
+                    android:id="@+id/equipmentsNumberTv"
+                    android:text="@string/equipmentsNumber" />
+
+                <EditText
+                    style="@style/number_pick_up"
+                    android:id="@+id/equipmentsNumberValue"
+                    android:layout_toLeftOf="@+id/equipmentsNumberTv"
+                    android:layout_below="@+id/workersNumberValue" />
+
+                <TextView
+                    style="@style/addFollowUpScreenTextViewToTheRight"
+                    android:layout_below="@+id/equipmentsNumberTv"
+                    android:id="@+id/currentWorkTv"
+                    android:text="@string/currentWork" />
+
+                <EditText
+                    android:id="@+id/currentWorkValue"
+                    android:layout_below="@+id/currentWorkTv"
+                    style="@style/addFollowUpScreenTextArea" />
+
+                <TextView
+                    style="@style/addFollowUpScreenTextViewToTheRight"
+                    android:layout_below="@+id/currentWorkValue"
+                    android:id="@+id/currentObstaclesTv"
+                    android:text="@string/currentObstacles" />
+
+                <EditText
+                    android:id="@+id/currentObstaclesValue"
+                    android:layout_below="@+id/currentObstaclesTv"
+                    style="@style/addFollowUpScreenTextArea"
+                    android:textColor="@color/holo_red_light" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/addFollowUpScreenTextViewToTheRight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/currentNoticesTv"
+                android:text="@string/currentNotices" />
+
+            <EditText
+                android:id="@+id/currentNoticesValue"
+                style="@style/addFollowUpScreenTextArea"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                style="@style/addFollowUpScreenTextViewToTheRight"
+                android:layout_height="wrap_content"
+                android:id="@+id/measuresToAvoidObstaclesTv"
+                android:text="@string/measuresToAvoidObstacles" />
+
+            <EditText
+                android:id="@+id/measuresToAvoidObstaclesValue"
+                style="@style/addFollowUpScreenTextArea"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/addFollowUpScreenTextViewToTheRight"
+                android:id="@+id/principalServicesTv"
+                android:text="@string/principalServices" />
+
+            <EditText
+                android:id="@+id/principalServicesValue"
+                style="@style/addFollowUpScreenTextArea"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/take_picture_btn"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:text="@string/attachPhoto"
+                android:gravity="right"
+                style="@style/awesome_yellow_button"
+                android:drawableLeft="@drawable/picture_icon"
+                android:drawablePadding="3dp"/>
+        </LinearLayout>
+    </ViewFlipper>
+</LinearLayout>
 
 
