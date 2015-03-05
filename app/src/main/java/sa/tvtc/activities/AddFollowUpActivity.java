@@ -83,14 +83,9 @@ public class AddFollowUpActivity extends FragmentActivity {
                     // If there aren't any other children, just break.
                     if (viewFlipper.getDisplayedChild() == 0)
                         break;
+                    flipLeft();
 
-                    // Next screen comes in from left.
-                    viewFlipper.setInAnimation(this, R.anim.slide_in_from_left);
-                    // Current screen goes out from right.
-                    viewFlipper.setOutAnimation(this, R.anim.slide_out_to_right);
 
-                    // Display next screen.
-                    viewFlipper.showNext();
                 }
 
                 // Handling right to left screen swap.
@@ -101,21 +96,46 @@ public class AddFollowUpActivity extends FragmentActivity {
                         break;
 
                     // Next screen comes in from right.
-                    viewFlipper.setInAnimation(this, R.anim.slide_in_from_right);
-                    // Current screen goes out from left.
-                    viewFlipper.setOutAnimation(this, R.anim.slide_out_to_left);
-
-                    // Display previous screen.
-                    viewFlipper.showPrevious();
+                    flipRight();
                 }
                 break;
         }
         return false;
     }
 
+    private void flipLeft() {
+        // Next screen comes in from left.
+        viewFlipper.setInAnimation(this, R.anim.slide_in_from_left);
+        // Current screen goes out from right.
+        viewFlipper.setOutAnimation(this, R.anim.slide_out_to_right);
+
+        // Display next screen.
+        viewFlipper.showNext();
+    }
+
     public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), getResources().getString(R.string.pick_date_msg));
+    }
+
+    public void pursuitTracking(View v) {
+        flipRight();
+
+    }
+
+    private void flipRight() {
+        // Next screen comes in from right.
+        viewFlipper.setInAnimation(this, R.anim.slide_in_from_right);
+        // Current screen goes out from left.
+        viewFlipper.setOutAnimation(this, R.anim.slide_out_to_left);
+
+        // Display previous screen.
+        viewFlipper.showPrevious();
+    }
+
+    public void goBack(View v) {
+        // Next screen comes in from left.
+        flipLeft();
     }
 
     public static class DatePickerFragment extends DialogFragment

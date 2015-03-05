@@ -15,8 +15,7 @@
         <item name="android:layout_marginRight">2dp</item>
     </style>
 
-    <style name="awesome_green_button">
-        <item name="android:background">@drawable/button_green_background</item>
+    <style name="awesome_button">
         <item name="android:shadowColor">#ff497ea8</item>
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">0</item>
@@ -26,17 +25,14 @@
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">18sp</item>
     </style>
-    <style name="awesome_yellow_button">
+    <style name="awesome_green_button" parent="awesome_button">
+        <item name="android:background">@drawable/button_green_background</item>
+    </style>
+    <style name="awesome_orange_button" parent="awesome_button">
+        <item name="android:background">@drawable/button_orange_background</item>
+    </style>
+    <style name="awesome_yellow_button" parent="awesome_button">
         <item name="android:background">@drawable/button_yellow_background</item>
-        <item name="android:shadowColor">#ff497ea8</item>
-        <item name="android:shadowDx">0</item>
-        <item name="android:gravity">center</item>
-        <item name="android:shadowDy">0</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">40dp</item>
-        <item name="android:shadowRadius">8</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="projectDetailsTv">
@@ -61,9 +57,9 @@
     <!--Specific styles for the authentication page-->
     <style name="authenticationScreenEditText">
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_height">50dp</item>
         <item name="android:layout_centerVertical">true</item>
-        <item name="android:layout_marginTop">23dp</item>
+        <item name="android:layout_marginTop">13dp</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:gravity">right</item>
         <item name="android:padding">8dp</item>
@@ -74,14 +70,14 @@
     <style name="authenticationScreenTextView">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">23dp</item>
+        <item name="android:layout_marginTop">13dp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">20sp</item>
     </style>
     <!--Specific styles for addFollowUp page-->
     <style name="addFollowUpScreenTextViewToTheRight" parent="textViewToTheRight">
-        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginTop">8dp</item>
     </style>
     <style name="number_pick_up">
         <item name="android:layout_width">wrap_content</item>

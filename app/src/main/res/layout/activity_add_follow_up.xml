@@ -51,7 +51,7 @@
                     android:layout_alignLeft="@+id/dateOfTrackingTv"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:onClick="showDatePickerDialog"
                     android:id="@+id/pick_date_button" />
 
@@ -159,13 +159,24 @@
                     android:layout_below="@+id/currentWorkValue"
                     android:id="@+id/currentObstaclesTv"
                     android:text="@string/currentObstacles" />
-
                 <EditText
                     android:id="@+id/currentObstaclesValue"
                     android:layout_below="@+id/currentObstaclesTv"
                     style="@style/addFollowUpScreenTextArea"
                     android:textColor="@color/holo_red_light" />
+
+                <Button
+                    android:text="@string/pursuit"
+                    style="@style/awesome_orange_button"
+                    android:layout_marginTop="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:onClick="pursuitTracking"
+                    android:id="@+id/pursuitTrackingBtn" />
+
             </RelativeLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -221,7 +232,16 @@
                 android:gravity="right"
                 style="@style/awesome_yellow_button"
                 android:drawableLeft="@drawable/picture_icon"
-                android:drawablePadding="3dp"/>
+                android:drawablePadding="3dp" />
+            <Button
+                android:text="@string/goBack"
+                style="@style/awesome_orange_button"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="goBack"
+                android:id="@+id/goBackTrackingBtn" />
         </LinearLayout>
     </ViewFlipper>
 </LinearLayout>

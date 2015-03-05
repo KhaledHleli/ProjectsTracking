@@ -33,7 +33,8 @@
     <string name="principalServices">موقف الخدمات  الاساسية </string>
     <string name="pick_date">اختيار</string>
     <string name="pick_date_msg">الرجاء اختيار تاريخ المتابعة:</string>
-
+    <string name="pursuit">متابعة التسجيل</string>
+    <string name="goBack">رجوع</string>
 </resources>
 
 
